@@ -87,7 +87,7 @@ console.groupEnd()
 
 console.group("Listar información de arrays")
 
-const listaSupermercado = [
+let listaSupermercado = [
     "arroz",
     "pan",
     "arepa",
@@ -129,12 +129,18 @@ for (let producto of listaSupermercado) {
 
 console.groupEnd()
 
-console.groupCollapsed("Foreach")
+console.groupCollapsed("Foreach") //foreach permite recibir el producto y su indice, for of solo el producto
 
-listaSupermercado.forEach(producto => {
-    console.log(producto)
+listaSupermercado.forEach((producto, index) => {
+    console.log(producto, index)
 })
 
 console.groupEnd()
+
+console.groupCollapsed("Map") // map permite recibir el producto y cambiarle algo
+
+listaSupermercado = listaSupermercado.map(producto => producto.toUpperCase())
+
+console.log(listaSupermercado)
 
 console.groupEnd()
