@@ -49,7 +49,7 @@ delete array[5] // -> elimina la posición totalmente, no retorna nada
 
 console.groupEnd()
 
-console.groupCollapsed("Concatenar arrays")
+console.group("Concatenar arrays")
 
 /* Recordatorio objetos: 
 
@@ -71,5 +71,16 @@ console.log(`objeto3: ${objeto3}`)
 
 */
 
+let primerosNumeros = [1, 2, 3, 4, 5]
+let segundosNumeros = [6, 7, 8, 9, 10]
+console.log(`primerosNumeros original: ${primerosNumeros}`)
+
+primerosNumeros.push(...segundosNumeros) // -> concatena
+console.log(`primerosNumeros concatenado con segundosNumeros: ${primerosNumeros}`)
+
+primerosNumeros = primerosNumeros.concat(segundosNumeros) 
+// -> suma elementos del primer y segundo array (spread operator). 
+// Se puede asignar a uno nuevo o reescribir
+console.log(`primerosNumeros reescrito y concatenado: ${primerosNumeros}`)
 
 console.groupEnd()
