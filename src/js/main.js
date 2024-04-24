@@ -39,3 +39,14 @@ array.unshift("2")
 console.log(array)
 
 console.groupEnd()
+
+console.groupCollapsed("Eliminar elementos del array")
+console.log(array)
+
+array.pop() // -> al final del array, retorna el elemento
+array.shift() // -> al inicio del array, retorna el elemento
+delete array[5] // -> elimina la posición totalmente, no retorna nada
+
+console.groupEnd()
+
+
