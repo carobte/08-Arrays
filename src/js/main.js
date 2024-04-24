@@ -31,7 +31,7 @@ console.groupEnd()
 
 console.groupCollapsed("Agregar elementos del array")
 
-array[10] = "bravo" 
+array[10] = "bravo"
 array.push("charlie") // -> al final del array
 array.push("delta")
 array.unshift("1") // -> al inicio del array
@@ -49,4 +49,27 @@ delete array[5] // -> elimina la posición totalmente, no retorna nada
 
 console.groupEnd()
 
+console.groupCollapsed("Concatenar arrays")
 
+/* Recordatorio objetos: 
+
+const objeto1 = {
+    nombre: "Juan",
+    apellido: "Perez"  
+}
+
+const objeto2 = {
+    edad: "26 años",
+    ciudad: "Medellín"  
+}
+
+Object.assign(objeto1, objeto2) // -> Asigna propiedades del objeto2 en el objeto1 != concatenar, se altera primer parametro
+console.log(`objeto1: ${objeto1}`)
+
+const objeto3 = {...objeto1, ...objeto2} // -> Spread operator para concatenar un nuevo objeto
+console.log(`objeto3: ${objeto3}`) 
+
+*/
+
+
+console.groupEnd()
