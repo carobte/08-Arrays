@@ -49,7 +49,7 @@ delete array[5] // -> elimina la posición totalmente, no retorna nada
 
 console.groupEnd()
 
-console.group("Concatenar arrays")
+console.groupCollapsed("Concatenar arrays")
 
 /* Recordatorio objetos: 
 
@@ -78,9 +78,63 @@ console.log(`primerosNumeros original: ${primerosNumeros}`)
 primerosNumeros.push(...segundosNumeros) // -> concatena
 console.log(`primerosNumeros concatenado con segundosNumeros: ${primerosNumeros}`)
 
-primerosNumeros = primerosNumeros.concat(segundosNumeros) 
+primerosNumeros = primerosNumeros.concat(segundosNumeros)
 // -> suma elementos del primer y segundo array (spread operator). 
 // Se puede asignar a uno nuevo o reescribir
 console.log(`primerosNumeros reescrito y concatenado: ${primerosNumeros}`)
+
+console.groupEnd()
+
+console.group("Listar información de arrays")
+
+const listaSupermercado = [
+    "arroz",
+    "pan",
+    "arepa",
+    "aguapanela", 
+    "huevos",
+    "guaro",
+    "pescado",
+    "cafe",
+    "leche",
+    "queso", 
+    "carne"
+]
+
+// Imprimir con : for, while, for of, foreach.
+
+console.groupCollapsed("For")
+
+for (let i = 0; i < listaSupermercado.length; i++) {
+    console.log(listaSupermercado[i])    
+}
+
+console.groupEnd()
+
+console.groupCollapsed("While")
+
+let i = 0
+while (i < listaSupermercado.length) {
+    console.log(listaSupermercado[i])   
+    i++
+}
+
+console.groupEnd()
+
+console.groupCollapsed("For of")
+
+for (let producto of listaSupermercado) {
+    console.log(producto)
+}
+
+console.groupEnd()
+
+console.groupCollapsed("Foreach")
+
+listaSupermercado.forEach(producto => {
+    console.log(producto)
+})
+
+console.groupEnd()
 
 console.groupEnd()
